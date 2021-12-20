@@ -6,4 +6,4 @@
 
 # 사용요소 
 - NotificationCenter, UICollectionReusableView ,CollectionView 
-- Codable, Equatable, MVVM 
+- Codable, MVVM 
