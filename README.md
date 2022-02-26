@@ -11,7 +11,7 @@
 
 # 새로 배운 것 
  
-  - 키보드 
+  - 키보드디
   
   NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView)
                                       , name: UIResponder.keyboardWillShowNotification, object: nil)
