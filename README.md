@@ -7,3 +7,11 @@
 # 사용요소 
 - NotificationCenter, UICollectionReusableView ,CollectionView 
 - Codable, MVVM 
+
+
+# 새로 배운 것 
+ 
+  - 키보드 
+  NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView), name: UIResponder.keyboardWillShowNotification, object: nil)
+  NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
