@@ -13,7 +13,7 @@
  
   - 키보드디텍션
 
-  ```
+  ```Swift
   NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView)
        , name: UIResponder.keyboardWillShowNotification, object: nil)
 
@@ -46,7 +46,7 @@ extension TodoListViewController {
 
   - mutating , equatable 
 
-  ``` 
+  ```Swift
   struct Todo: Codable, Equatable {
     let id: Int
     var isDone: Bool
@@ -69,7 +69,7 @@ extension TodoListViewController {
   
   - enum CaseIterable 
 
-  ``` 
+  ```Swift
     enum Section: Int, CaseIterable {
         case today
         case upcoming
