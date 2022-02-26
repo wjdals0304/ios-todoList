@@ -11,11 +11,12 @@
 
 # 새로 배운 것 
  
-  - 키보드디
+  - 키보드디텍션
+  
   
   NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView)
-                                      , name: UIResponder.keyboardWillShowNotification, object: nil)
+       , name: UIResponder.keyboardWillShowNotification, object: nil)
 
   NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView)
-                                      , name: UIResponder.keyboardWillHideNotification, object: nil)
-        
+     , name: UIResponder.keyboardWillHideNotification, object: nil)
+         
