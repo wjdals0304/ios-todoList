@@ -19,6 +19,29 @@
 
   NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView)
      , name: UIResponder.keyboardWillHideNotification, object: nil)         
+
+
+extension TodoListViewController {
+    @objc private func adjustInputView(noti: Notification) {
+        guard let userInfo = noti.userInfo else { return }
+        // TODO: 키보드 높이에 따른 인풋뷰 위치 변경
+        guard let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        
+        if noti.name == UIResponder.keyboardWillShowNotification {
+            let adjustmentHeight = keyboardFrame.height - view.safeAreaInsets.bottom
+            inputViewBottom.constant = adjustmentHeight
+        } else {
+            inputViewBottom.constant = 0
+        }
+        
+        
+    }
+}
+
+
+
+
+
   ```
 
   - mutating , equatable 
