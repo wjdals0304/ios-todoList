@@ -9,14 +9,56 @@
 - Codable, MVVM 
 
 
-# 새로 배운 것 
+# 새로 배운 내용
  
   - 키보드디텍션
-  
-  
+
+  ```
   NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView)
        , name: UIResponder.keyboardWillShowNotification, object: nil)
 
   NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView)
-     , name: UIResponder.keyboardWillHideNotification, object: nil)
-         
+     , name: UIResponder.keyboardWillHideNotification, object: nil)         
+  ```
+
+  - mutating , equatable 
+
+  ``` 
+  struct Todo: Codable, Equatable {
+    let id: Int
+    var isDone: Bool
+    var detail: String
+    var isToday: Bool
+    
+    mutating func update(isDone: Bool, detail: String, isToday: Bool) {
+        // TODO: update 로직 추가
+        self.isDone = isDone
+        self.detail = detail
+        self.isToday = isToday
+    }
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        // TODO: 동등 조건 추가
+        return lhs.id == rhs.id
+    }
+  }
+  ``` 
+  
+  - enum CaseIterable 
+
+  ``` 
+    enum Section: Int, CaseIterable {
+        case today
+        case upcoming
+        
+        var title: String {
+            switch self {
+            case .today: return "Today"
+            default: return "Upcoming"
+            }
+        }
+    }
+
+   Section.allCases.count
+
+  ``` 
