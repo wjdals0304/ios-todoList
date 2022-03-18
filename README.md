@@ -5,8 +5,8 @@
 
 
 # 사용요소 
-- NotificationCenter, UICollectionReusableView ,CollectionView 
-- Codable, MVVM 
+- NotificationCenter, UICollectionReusableView, CollectionView 
+- Storyboard
 
 
 # 새로 배운 내용
@@ -33,15 +33,8 @@ extension TodoListViewController {
         } else {
             inputViewBottom.constant = 0
         }
-        
-        
     }
 }
-
-
-
-
-
   ```
 
   - mutating , equatable 
